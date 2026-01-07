@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ product.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ product.title }}</h1>
+        <img src="{{ product.image }}" alt="{{ product.title }}" class="product-img">
+
+        <p><strong>Harga:</strong> {{ product.price_rp }}</p>
+        <p><strong>Kategori:</strong> {{ product.category }}</p>
+        <p><strong>Deskripsi:</strong> {{ product.description_id }}</p>
+
+        <a href="{{ url_for('index') }}">⬅️ Kembali ke Daftar</a>
+    </div>
+</body>
+</html>
